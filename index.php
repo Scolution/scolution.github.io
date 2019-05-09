@@ -47,6 +47,20 @@
         </div>
       </div>
 
+    <?php
+      $ip = '5.135.198.176';
+      $port = 26285;
+
+      $checkSock = @fsockopen($ip, $port, $empty, $empty, 1);
+
+      if($checkSock !== FALSE)
+      {
+        echo  'Online';
+      }else{
+        echo  'Offline';
+      }
+    ?>
+
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
           <img class="card-img-top" src="https://scolution.dev/pv/img/dpeff5.png" alt="">
